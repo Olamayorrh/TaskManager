@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/modules/logIn/logIn.css" />
+    <link rel="stylesheet" href="/components/button/button.css">
+    <link rel="stylesheet" href="/components/backGround/backGround.css">
+   
+    
+
+    
+    <script src="/assets/js/global.js" defer></script>
+    <script src="/modules/logIn/logIn.js" defer></script>
+
+    <!--  data-import="/components/backGround/backGround.html" -->
+</head>
+<body >
+    <div>
+    <section class="container" >
+        <div class="logo">
+            <img src="/assets/images/logo_image.svg" id="img1" />
+        </div>
+        <div class="task" >
+            <h2>Welcome Back!</h2>
+            <p>Enter your details to access your account</p>
+        </div>
+        <div class="button">
+            <div class="toggle">
+            <button id="loginBtn" class="active">Login</button>
+            <button id="signupBtn"  onclick="document.location='/index.html'">Sign UP</button>
+            </div>
+        </div>
+
+        <form class="form form2">
+           
+            <div class="input input2">
+            <label for="email" class="label">Email Address*</label>
+            <div class="user2 userr">
+                <span class="fa-regular fa-envelope "></span
+                ><input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="hello@example.com"
+                />
+            </div>
+            </div>
+
+            <div class="input input3">
+            <label for="password" id="pass" class="label">password*</label>
+            <div class="user3 userr">
+                <span class="fa-solid fa-lock fa-lg"></span
+                ><input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="........"
+                />
+            </div>
+           
+            </div>
+        </form>
+
+       <div data-import="/components/button/button.html" id="logButton"></div>
+
+        <footer>
+            <p class="foot">
+            By continuing, you agree to our
+            <span class="blue">Terms of service</span> $
+            <span class="blue">Privacy Policy</span>
+            </p>
+            <p class="foot foot2">&copy; 2024 TaskMaster | Made for University Students</p>
+        </footer>
+    </section>
+   
+</body>
+</html>

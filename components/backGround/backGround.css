@@ -1,0 +1,153 @@
+
+li{
+    list-style: none;
+}
+ li:nth-child(1){
+    width: 4.0rem;
+    height:4.0rem;
+    border-radius: 2.0rem;
+    border: 3px solid #E1EDFC;
+    position: absolute;
+    left: 6.5rem;
+    top: 10.6rem;
+
+ animation: growFade 4s ease-in-out infinite;
+  opacity: 0;
+
+  animation-delay: 2s;
+  animation-duration: 8s;
+}
+
+@keyframes growFade{
+     0% {
+        opacity: 0.75;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+    100% {
+        opacity: 0.75;
+        transform: scale(0.95);
+    }
+ 
+
+}
+    
+
+li:nth-child(2){
+    /* width: 5.0rem;
+    height:5.0rem;
+    background-image: radial-gradient(closest-side,rgba(234, 188, 234,0.2),purple);
+    position: absolute;
+    left: 3.5rem;
+    top: 4rem; */
+
+
+     width: 10.0rem;
+    height: 10.0rem;
+    position: absolute;
+    left: 4.5rem;
+    top: 20.0rem;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(56, 54, 179, 0.45) 0%,   /* center color */
+        rgba(18, 15, 194, 0.25) 35%,
+        rgba(82, 79, 245, 0.1) 65%,
+        rgba(110, 103, 244, 0) 100%   /* fade out */
+    );
+    animation: pulse 4s ease-in-out infinite;
+    filter: blur(2px);
+
+
+
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.75;
+        transform: scale(0.92);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 0.75;
+        transform: scale(0.92);
+    }
+}
+
+
+li:nth-child(3){
+   
+     width: 10.0rem;
+    height: 10.0rem;
+    position: absolute;
+    left: 8.5rem;
+    top: 50.0rem;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(77, 149, 243, 0.45) 0%,   /* center color */
+        rgba(118, 173, 245, 0.25) 35%,
+        rgba(124, 177, 245, 0.1) 65%,
+        rgba(151, 183, 225, 0) 100%   /* fade out */
+    );
+    animation: glow 4s ease-in-out infinite;
+    filter: blur(2px);
+
+
+
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.75;
+        transform: scale(0.92);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 0.75;
+        transform: scale(0.92);
+    }
+}
+
+
+
+
+#arrow1{
+   position: absolute;
+   width: 4.0rem;
+    left: 89.5rem;
+    top: 10.0rem;
+    border:0px solid red;
+    transform: translateX(50%);
+    animation: bounce 0.9s infinite cubic-bezier(.28,.84,.42,1);
+
+
+
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* height of bounce */
+    }
+}
+
+#arrow2{
+  
+   position: absolute;
+   width: 2.5rem;
+    left: 91.0rem;
+    top: 37.0rem;
+    
+}
