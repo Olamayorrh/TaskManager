@@ -1,0 +1,104 @@
+.mainPage{
+    display: flex;
+   
+    
+    /* align-items: center; */
+}
+
+
+.mainPage ._mainPage__sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 25%;
+    border: 2px solid purple;
+    /* padding: 1.5rem; */
+    box-sizing: border-box;
+}
+
+._mainPage__sidebar.close-menu{
+    width: 5%;
+   overflow: hidden;
+}
+
+._mainPage__sidebar.close-menu ._title__task h2 {
+    display: none;
+}
+
+._title__task.close-menu img {
+    display: none;
+    width: 0rem;
+}
+
+._title__task.close-menu .icon {
+    display: block;
+}
+
+
+.title{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    padding-left: 1.0rem;
+    border: 2px solid red;
+}
+
+.title ._title__task{
+    display: flex;
+    align-items: center;
+    gap: 1.0rem;
+    
+   
+}
+
+.title ._title__task img{
+    width: 2.5rem;
+}
+
+.title ._title__task h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.mainPage ._mainPage__main{
+    width: 80%;
+    border: 2px solid green;
+    padding: 1.5rem;
+}
+
+._mainPage__sidebar-user{
+    display: flex;
+    align-items: center;
+    gap: 1.0rem;
+    padding: 0.5rem 0;
+    padding-left: 1.0rem;
+    
+}
+._mainPage__sidebar-user__initial{
+    padding: 0.75rem;
+    background-color: blue;
+    color: white;
+    border-radius: 50%;
+}
+
+._mainPage__sidebar-user__details{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: start;
+}
+
+._mainPage__sidebar-user__details #email{
+    opacity: 0.5;
+}
+
+hr{
+    width: 100%;
+    height: 0.1rem;
+}
+
+._mainPage__sidebar__aside-bar{
+    border: 0px solid red;
+    padding-left: 1.0rem;
+}

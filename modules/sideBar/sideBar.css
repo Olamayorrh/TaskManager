@@ -1,0 +1,44 @@
+.sidebar-area{
+    display: flex;
+    flex-direction: column;
+    gap: 1.0rem;
+    padding: 1.0rem 0;
+}
+
+a{
+    display: flex;
+    align-items: center;
+    border: 0px solid red;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: black;
+    transition:  ease all;
+}
+
+.list{
+    list-style: none;
+    
+}
+
+.list a:hover{
+    background-color: gray;
+    color: white;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    width: 80%;
+}
+
+li{
+    color: rgb(246, 241, 241);
+    font-size: 0.95rem;
+}
+
+
+
+.list a:active{
+    background-color: rgb(187, 187, 239);
+    color: blue;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    width: 80%;
+}

@@ -10,3 +10,5 @@ signupBtn.addEventListener("click", () => {
   signupBtn.classList.add("active");
   loginBtn.classList.remove("active");
 });
+
+

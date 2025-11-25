@@ -1,14 +1,21 @@
 const componentElements = document.querySelectorAll("[data-import]");
 
+console.log(componentElements);
+
+
 const renderComponent = (elements)=>{
     for (let element of elements) {
+      console.log(element);
+      
       const dataImport = element.getAttribute("data-import");
         fetch(dataImport)
         .then((res) => {
           if (!res.ok) {
             throw "Not found";
           }
+          
           return res.text();
+
         })
         .then((component) => {
           element.innerHTML = component;
@@ -38,7 +45,11 @@ function loadComponentScripts(element) {
     }
     script.remove();
 
-    document.body.appendChild(newScript);
+    
+  document.body.appendChild(newScript);
+
+   
+    
   }
 }
 
