@@ -10,14 +10,16 @@ icon.addEventListener("click", ()=>{
   
 });
 
-
 window.addEventListener("DOMContentLoaded", () => {
   const fullName = localStorage.getItem("currentUserName") || "";
    const email_ = localStorage.getItem("currentUserEmail") || "";
+   const initial = document.getElementById("initial");
 
   // to get firstName from input, also checks if there are two(if it contains both name and surname)
   const firstName = fullName.split(" ")[0];
 
+  const firstLetter = firstName.charAt(0).toUpperCase();
+  initial.innerText = firstLetter;
  
   document.getElementById("displayName").textContent = firstName;
   document.getElementById("email").textContent = email_;

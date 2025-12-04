@@ -32,6 +32,7 @@ a{
 li{
     color: rgb(246, 241, 241);
     font-size: 0.95rem;
+    cursor: pointer;
 }
 
 
