@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="/modules/modal/modal.css">
+    <script src="/modules/modal/modal.js" defer></script>
+</head>
+<body>
+     <section class="modal">
+        <div id="modal_close-btn"><span class="material-symbols-outlined">close_small</span></div>
+        
+        <div class="modal_new">
+            <span class="material-symbols-outlined">star_shine</span>
+            <h1>Create New Task</h1>
+        </div>
+        <h3>Add a new task to your productivity list</h3>
+
+        <form>
+            <div class="form_title">
+                <label for="title"  id="title">Title</label>
+                <div class="title_input">
+                    <input type="text" placeholder="Enter task title" title="title">
+                    <span class="material-symbols-outlined">star_shine</span>
+                </div>
+            </div>
+
+            <div class="form_detail">
+                <label for="input_desc" id="details">Description</label>
+                
+                 <textarea rows="4" cols="4" name="message" placeholder="Add task details..." id="input_desc"></textarea>
+            </div>
+
+            <div class="form_select">
+                    <div class="form_select-select">
+                        <label for="priority">Priority</label>
+                        <select name="priority" id="priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                        </select>
+                    </div>
+                    <div class="date">
+                        <label>Due Date</label>
+                        <input type="date" placeholder="mm/dd/yyy">
+                        
+                    </div>
+            </div>
+
+            <div class="btn">
+                <button id="btn1">cancel</button>
+
+                <button id="btn2">create Task</button>
+            </div>
+        </form>
+     </section>
+</body>
+</html>

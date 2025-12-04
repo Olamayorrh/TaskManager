@@ -2,88 +2,102 @@ const contain = document.querySelector(".sidebar-area");
 
 const lists = document.querySelector(".list");
 const ul = document.querySelector("ul");
-console.log(ul);
+// console.log(lists);
 
-console.log(contain);
+function initSidebar() {
+  const container = document.querySelector(".sidebar-area");
+  if (!container) return;
 
+  const list = [
+    {
+      path: "/modules/dashBoard/dashBoard.html",
+      logo: "dashboard",
+      title: "Dashboard",
+    },
+    { path: "/modules/task/task.html", logo: "task", title: "Tasks" },
+    {
+      path: "/modules/community/community.html",
+      logo: "group",
+      title: "Community",
+    },
+    {
+      path: "/modules/expenses/expenses.html",
+      logo: "attach_money",
+      title: "Expenses",
+    },
+    { path: "/modules/notes/notes.html", logo: "description", title: "Notes" },
+    {
+      path: "/modules/settings/settings.html",
+      logo: "settings",
+      title: "Settings",
+    },
+  ];
 
+  list.forEach((item) => {
+    const li = document.createElement("li");
+    li.classList.add("list");
+    li.innerHTML = `
+      <a>
+        <span class="material-symbols-outlined">${item.logo}</span>
+        <span>${item.title}</span>
+      </a>
+    `;
 
-    // ul.forEach((item) => {
-    //   if(item){
-    //     item.classList.add("active");
-    //   }
+    li.addEventListener("click", () => {
+      
+      document
+        .querySelectorAll(".list")
+        .forEach((el) => el.classList.remove("active"));
+      li.classList.add("active");
 
-    //   item.classList.remove("active");
-    // });
+      
+      localStorage.setItem("activeMenu", item.title);
 
-  
+      
+      const main = document.querySelector("main._mainPage__main");
+      main.setAttribute("data-import", item.path);
+      renderComponent([main]);
 
+      
+      if (item.path.includes("dashBoard.html")) {
+        setTimeout(() => {
+          if (window.renderDashboardCards) window.renderDashboardCards();
+          if (window.loadName) window.loadName();
+        }, 50);
+      }
+    });
 
-const list = [
-  {
-    path: "/mainLayout/mainLayout.html",
-    logo: "dashboard",
-    title: "Dashboard",
-  },
-  {
-    path: "#",
-    logo: "task",
-    title: "Tasks",
-  },
-  {
-    path: "#",
-    logo: "group",
-    title: "Community",
-  },
-  {
-    path: "#",
-    logo: "attach_money",
-    title: "Exppenses",
-  },
+    container.appendChild(li);
+  });
 
-  {
-    path: "/modules/dashboard/dashboard.html",
-    logo: "description",
-    title: "Notes",
-  },
+ 
+  const saved = localStorage.getItem("activeMenu");
+  let defaultItem = list[0]; 
+  if (saved) {
+    const savedItem = list.find((i) => i.title === saved);
+    if (savedItem) defaultItem = savedItem;
+  }
 
-  {
-    path: "/modules/dashboard/dashboard.html",
-    logo: "settings",
-    title: "Settings",
-  },
-];
+  const allList = Array.from(document.querySelectorAll(".list"));
+  const activeList = allList.find((li) =>
+    li.innerText.includes(defaultItem.title)
+  );
+  if (activeList) activeList.classList.add("active");
 
-{/* <ul class="sidebar-area-list">
-        <li><a > <span class="material-symbols-outlined">grading</span></a> </li>
-        <li><a>DashBoard</a></li>
-</ul> */}
+  // Load default component
+  const main = document.querySelector("main._mainPage__main");
+  main.setAttribute("data-import", defaultItem.path);
+  renderComponent([main]);
 
+  // If default is Dashboard, render cards and name
+  if (defaultItem.path.includes("dashBoard.html")) {
+    setTimeout(() => {
+      if (window.renderDashboardCards) window.renderDashboardCards();
+      if (window.loadName) window.loadName();
+    }, 50);
+  }
+}
 
-function showSidebar(obj) {
-  const template = document.createElement("template");
+initSidebar();
 
-  template.innerHTML = `
-     
-        <li class="list">
-            <a href= ${obj.path}>
-                <span class="material-symbols-outlined">${obj.logo}</span>
-                <span >${obj.title}</span>
-            </a> 
-       </li>
-  `;
-
-  const menu = template.content.firstElementChild;
-
-  return menu
-};
-
-
-
-list.forEach((item) => {
-  const menuItem = showSidebar(item);
-  console.log(menuItem);
-  
-  contain.appendChild(menuItem);
-});
 

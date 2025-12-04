@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="/modules/task/task.css" />
+
+<section class="task">
+   <div class="management">
+        <img src="/assets/images/logo_image.svg" alt="" id="management_img"/>
+        <div class="management-manage">
+            <h2>Task Management</h2>
+            <p>Manage and track your tasks</p>
+        </div>
+   </div>
+   <div class="summary">
+        <div class="summary_box1">
+            <div id="circle">
+                <span class="material-symbols-outlined icon">check_circle</span>
+                <span id="my_task">My Tasks</span>
+            </div>
+            <div id="chart">
+                <span class="material-symbols-outlined">insert_chart</span>
+                <span>AI Summary</span>
+            </div>
+        </div>
+       
+        <div class="summary_box2">
+               
+              <div class="record">
+                    <div id="tag1">
+                        <p id="zero">0</p>
+                        <p class="activeTag">Active tasks</p>
+                    </div>
+                   <div id="tag2">
+                       
+                   </div> 
+                    <div id="tag3">
+                        <p id="colorg">0</p>
+                        <p class="activeTag">Completed</p>
+                    </div>
+                </div>
+                
+                <div class="btn">
+                <button>
+                    <span class="material-symbols-outlined">add</span>
+                    <span id="openModal">Add Task</span>
+                </button>
+               </div>
+
+        </div>
+
+         <dialog >
+                <div class="modal">
+                <div id="modal_close-btn" class="closeModal"><span class="material-symbols-outlined close1">close_small</span></div>
+                
+                <div class="modal_new">
+                    <span class="material-symbols-outlined">star_shine</span>
+                    <h1>Create New Task</h1>
+                </div>
+                <h3>Add a new task to your productivity list</h3>
+
+                <form>
+                    <div class="form_title">
+                        <label for="title"  id="title">Title</label>
+                        <div class="title_input">
+                            <input type="text" placeholder="Enter task title" title="title">
+                            <span class="material-symbols-outlined">star_shine</span>
+                        </div>
+                    </div>
+
+                    <div class="form_detail">
+                        <label for="input_desc" id="details">Description</label>
+                        <!-- <input type="text" placeholder="Add task details..." id="input_desc"/> -->
+                        <textarea rows="4" cols="4" name="message" placeholder="Add task details..." id="input_desc"></textarea>
+                    </div>
+
+                    <div class="form_select">
+                            <div class="form_select-select">
+                                <label for="priority">Priority</label>
+                                <select name="priority" id="priority">
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                                </select>
+                            </div>
+                            <div class="date">
+                                <label>Due Date</label>
+                                <input type="date" placeholder="mm/dd/yyy">
+                            </div>
+                    </div>
+
+                    <div class="btn">
+                        <button id="btn1" class="closeModal">cancel</button>
+
+                        <button id="btn2">create Task</button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
+       
+        <div class="summary_box3">
+            <p id="round"></p>
+            <p>No Tasks yet</p>
+            <p>click "Add Task" to create your first task</p>
+        </div>
+   </div>
+</section>
+
+<script src="/modules/task/task.js"></script>

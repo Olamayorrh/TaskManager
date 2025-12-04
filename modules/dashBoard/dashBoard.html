@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="/modules/dashBoard/dashBoard.css" />
+
 <section class="dashboard-area">
     <div class="dashboard-area__greeting">
-        <h1>Good Evening, Mayowa Olaniyan!</h1>
+        <h1 >Good Evening, <span id="fullName"></span> !</h1>
         <p>Here's what's happening what is happening with your productivity today</p>
     </div>
     <div class="cardUpper">
@@ -10,30 +11,30 @@
     <div class="cardLower">
         <div class="box1">
            <div class="box1_up">
-                <img src="/assets/images/task.png"/>
+                <div><img src="/assets/images/task.png"/></div>
                <p>Recent Tasks</p>
-        </div>
+         </div>
             <div class="div_center">
                 <img src="/assets/images/checkBox.png"/>
-                <p>No Tasks Yet</p>
+                <p >No Tasks Yet</p>
             </div>
         </div> 
+        
         <div class="box2">
-            <div>
-                <span></span>
+            <div class="action">
+                <div class="logo"> <img src="/assets/images/arrow_blue.png"/></div>
                 <p>Quick Actions</p>
             </div>
-            <div>
-                <span>Logo</span>
-                <div>
-                    <p>Create New Task</p>
-                    <p>Add a task to your list</p>
-                </div>
+            
+            <div class="section_card">
+                
             </div>
+            
             <div></div>
             <div></div>
         </div>
     </div>
 </section>
-<script src="/modules/dashBoard/dashBoard.js">
-</script>
+
+
+<script src="/modules/dashBoard/dashBoard.js"></script>

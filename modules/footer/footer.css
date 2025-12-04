@@ -1,0 +1,27 @@
+.footer-area{
+    
+    padding-left: 1.0rem;
+}
+
+.footer-area #foot{
+    display: flex;
+    align-items: center;
+    /* padding: 0.6rem 0; */
+    
+    gap: 1.1rem;
+    border: 0px solid red;
+    padding: 0.5rem 0;
+}
+
+#logout{
+    color: red;
+   
+}
+
+.footer-area #foot:hover{
+     background-color: rgb(247, 243, 243);
+    color: white;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    width: 80%;
+}

@@ -3,13 +3,14 @@
     flex-direction: column;
     gap: 1.0rem;
     padding: 1.0rem 0;
+    border: 0px solid red;
 }
 
 a{
     display: flex;
     align-items: center;
     border: 0px solid red;
-    gap: 0.5rem;
+    gap: 1.1rem;
     text-decoration: none;
     color: black;
     transition:  ease all;
@@ -20,8 +21,8 @@ a{
     
 }
 
-.list a:hover{
-    background-color: gray;
+.list:hover{
+    background-color: rgb(247, 243, 243);
     color: white;
     border-radius: 0.2rem;
     padding: 0.8rem;
@@ -35,10 +36,15 @@ li{
 
 
 
-.list a:active{
+.list.active{
     background-color: rgb(187, 187, 239);
     color: blue;
     border-radius: 0.2rem;
     padding: 0.8rem;
     width: 80%;
+}
+
+.list.active:hover{
+   
+    opacity: 0.5;
 }

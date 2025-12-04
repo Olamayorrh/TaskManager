@@ -1,78 +1,113 @@
-const card1 = document.querySelector(".cardUpper");
+window.renderDashboardCards = function () {
+  const card1 = document.querySelector(".cardUpper");
+  if (!card1) return;
+  card1.innerHTML = "";
 
-console.log(card1);
+  const cardItems = [
+    {
+      title: "Active Tasks",
+      logo: "/assets/images/checkBox.png",
+      display: "0",
+      comment: "0 completed",
+      color: "#155DFC",
+    },
+    {
+      title: "Total Expenses",
+      logo: "/assets/images/dollar.png",
+      display: "0",
+      comment: "This period",
+      color: "#0092B8",
+    },
+    {
+      title: "Total Notes",
+      logo: "/assets/images/note.png",
+      display: "0",
+      comment: "Saved Notes",
+      color: "#00A63E",
+    },
+    {
+      title: "Completion Rate",
+      logo: "/assets/images/arrow.png",
+      display: "0",
+      comment: "Task Completion",
+      color: "#4F39F6",
+    },
+  ];
 
-
-{/* <div class="dashboard-area__card">
-  <div class="dashboard-area__card-top">
-    <p>Active Tasks</p>
-    <img src="/assets/images/logo_image.svg" alt="" />
-  </div>
-  <div class="dashboard-area__card-bottom">
-    <h1>0</h1>
-    <p>0 completed</p>
-  </div>
-</div>; */}
-
-
-
-const cardItems = [
-  {
-    title: "Active Tasks",
-    logo: "/assets/images/logo_image.svg",
-    display: "0",
-    comment: "0 completed",
-  },
-
-  {
-    title: "Total Expenses",
-    logo: "/assets/images/logo_image.svg",
-    display: "0",
-    comment: "This period",
-  },
-
-  {
-    title: "Total Notes",
-    logo: "/assets/images/logo_image.svg",
-    display: "0",
-    comment: "Saved Notes",
-  },
-
-  {
-    title: "Completion Rate",
-    logo: "/assets/images/logo_image.svg",
-    display: "0",
-    comment: "Task Completion",
-  },
-];
-
-const createCard1 = (child)=>{
-    
-  const template = document.createElement("template");
-
-  template.innerHTML = `
-     <div class="dashboard-area__card">
+  cardItems.forEach((child) => {
+    const template = document.createElement("template");
+    template.innerHTML = `
+      <div class="dashboard-area__card">
         <div class="dashboard-area__card-top">
-            <p>${child.title}</p>
-            <img src="${child.logo}" alt="logo" />
+          <p>${child.title}</p>
+          <img src="${child.logo}" alt="logo" style="background-color: ${child.color};" class="logoImage"/>
         </div>
         <div class="dashboard-area__card-bottom">
-            <h1>${child.display}</h1>
-            <p>${child.comment}</p>
+          <h1>${child.display}</h1>
+          <p>${child.comment}</p>
         </div>
-    </div>
-  `;
+      </div>
+    `;
+    card1.appendChild(template.content.firstElementChild);
+  });
 
-  const card1 = template.content.firstElementChild;
 
-  return card1;
-}
+  const quickActions = [
+    {
+      logo: "/assets/images/check_blue.png",
+      title: "Create New Task",
+      desc: "Add a task to your list",
+      color:"#DBEAFE"
+    },
 
-cardItems.forEach((elem) => {
-  const card= createCard1(elem);
-  console.log(elem);
+    {
+      logo: "/assets/images/dollar_teal.png",
+      title: "Track Expense",
+      desc: "Record a new expense",
+      color:"#CEFAFE"
+    },
 
-  card1.appendChild(card);
+    {
+      logo: "/assets/images/note_green.png",
+      title: "Write Note",
+      desc: "capture your thoughts",
+      color:"#DBFCE7"
+    },
+  ];
+
+   const section = document.querySelector(".section_card");
+    if (!section) return;
+
+     quickActions.forEach((card) => {
+      const cardDiv = document.createElement("div");
+      cardDiv.classList.add("task_item");
+      cardDiv.innerHTML = `
+      <div class="logos" style=background-color:${card.color};><img src='${card.logo}'/></div>
+      <div class="text">
+          <p class="header">${card.title}</p>
+          <p class="faint">${card.desc}</p>
+      </div>
+    `;
+      section.appendChild(cardDiv);
+      console.log(cardDiv);
+      
+    });
+};
+
+// to get userName
+window.loadName = function () {
+  const nameElem = document.getElementById("fullName");
+  if (!nameElem) return;
+  const fullName = localStorage.getItem("currentUserName") || "";
+  nameElem.innerText = fullName;
+};
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.querySelector(".cardUpper")) {
+    window.renderDashboardCards();
+    window.loadName();
+  }
 });
 
 

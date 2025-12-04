@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
 :root{
     font-size: 10px;
+    
+    --backgroundColor: #F9FAFB;
+    --iconColor: brown;
+    --backgrounHover: teal;
+
 }
 
-
+html{
+     font-family: "Zalando Sans", sans-serif;;
+}
 
 .backgroundImage{
 	width: 100%;

@@ -1,0 +1,151 @@
+.modal{
+   background-color: #F8F9FA;
+    width: 35%;
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   margin-top: 5%;
+   padding: 1.5rem;
+   border-radius: 0.5rem;
+   box-shadow: 0 0 0 0.05rem;
+
+}
+
+#modal_close-btn{
+    border: 0px solid red;
+    display: flex;
+    justify-content: end;
+}
+
+.modal .modal_new{
+    border: 0px solid red;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.modal .modal_new h1,h3{
+   margin: 0rem;
+}
+
+.modal h3{
+    opacity: 0.6;
+    padding: 0.2rem 0;
+}
+
+.modal_new .material-symbols-outlined{
+    color: blue;
+     
+}
+
+.form_title{
+    border: 0px solid red;
+    margin: 0.6rem 0;
+    
+}
+
+.form_title #title{
+    font-size: 1.2rem;
+}
+
+.title_input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    gap: 0.5rem;
+}
+
+.modal input{
+    width: 90%;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.5rem ;
+}
+
+.modal textarea{
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.5rem ;
+}
+
+.modal input:focus, textarea:focus{
+    outline-color: rgb(77, 77, 246);
+}
+
+.title_input .material-symbols-outlined{
+    color: rgb(160, 156, 156);
+}
+
+form .form_detail{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.0rem;
+}
+
+form .form_detail #details{
+    font-size: 1.2rem;
+}
+
+.form_detail input{
+    height: 2.7rem;
+    
+}
+
+.form_detail input::placeholder{
+    display: flex;
+    align-items: start;
+}
+
+form .form_select{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.0rem 0;
+}
+
+
+.form_select-select{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+select{
+    border: 0px solid red;
+    width: 11.0rem;
+    padding: 0.2rem;
+    
+}
+
+.form_select .date{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modal form .btn{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.0rem 0;
+    border: 0px solid red;
+    padding: 0.5rem;
+}
+
+.modal form .btn #btn1{
+    font-size: 1.0rem;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    border: 1px solid rgb(217, 215, 215);
+}
+
+.modal form .btn #btn2{
+      font-size: 1.0rem;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: blue;
+    color: white;
+}

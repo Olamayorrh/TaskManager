@@ -25,6 +25,11 @@
     border-radius: 1.0rem;
     box-shadow: 0 0 0.4rem;
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.dashboard-area__card:hover{
+    box-shadow: 0 0 0 0.02rem;
 }
 
 .dashboard-area__card-top{
@@ -47,14 +52,15 @@
 
 
 .cardLower  {
-    border: 2px solid red;
+    border: 0px solid red;
     display: flex;
+    gap: 1.0rem;
 }
 
 .cardLower .box1, .box2{
-    border: 2px solid black;
+    border: 1px solid rgb(230, 227, 227);
     width:50%;
-    height: 8.0rem;
+   
     border-radius: 1.0rem;
 }
 
@@ -77,5 +83,82 @@
 
 .div_center{
     text-align: center;
+    margin-top: 10%;
+}
+
+
+.logoImage{
+    background-color: #155DFC;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    width: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    color: white;
+
+}
+
+.box2 .action{
+    display: flex;
+    border: 0px solid red;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+.box2 .task_item .logos{
+    border: 0px solid red;
+    width: 2.5rem;
+    height: 2.5rem;
+    
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box2 .task_item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 1px solid rgb(244, 240, 240);
+    padding: 0.5rem;
+    background-color: #F9FAFB;
+    transition: all 0.3s;
+}
+
+.box2 .task_item:hover{
+    background-color: #06B6D4;
+}
+
+.box2 .section_card{
+    border: 0px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.box2 .task .text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+}
+
+.box2 .task .text .header{
+   font-size: 1.2rem;
+   font-weight: bold;
+}
+
+.box2 .task .text .faint{
+    opacity: 0.6;
+}
+
+.dashboard-area .box2{
+    padding: 0.8rem;
+    background-color: white;
+    
 }
 
